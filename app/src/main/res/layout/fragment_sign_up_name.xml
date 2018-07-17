@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundDark"
+    android:orientation="vertical"
+    tools:context=".fragments.SignUpNameFragment">
+
+    <EditText
+        android:id="@+id/nameText"
+        style="@style/TextStyleRegular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_32dp"
+        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginTop="@dimen/size_32dp"
+        android:background="@drawable/edit_text_background"
+        android:drawableLeft="@drawable/ic_person"
+        android:drawablePadding="@dimen/text_size_8"
+        android:elevation="@dimen/size_2dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="number"
+        android:maxLines="1"
+        android:padding="@dimen/size_8dp" />
+
+    <EditText
+        android:id="@+id/surnameText"
+        style="@style/TextStyleRegular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_32dp"
+        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:background="@drawable/edit_text_background"
+        android:drawableLeft="@drawable/ic_person"
+        android:drawablePadding="@dimen/text_size_8"
+        android:elevation="@dimen/size_2dp"
+        android:ems="10"
+        android:hint="Surname"
+        android:inputType="number"
+        android:maxLines="1"
+        android:padding="@dimen/size_8dp" />
+
+    <EditText
+        android:id="@+id/mobileEditText"
+        style="@style/TextStyleRegular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_32dp"
+        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:background="@drawable/edit_text_background"
+        android:drawableLeft="@drawable/ic_smartphone"
+        android:drawablePadding="@dimen/text_size_8"
+        android:elevation="@dimen/size_2dp"
+        android:ems="10"
+        android:hint="Mobile number"
+        android:inputType="number"
+        android:maxLines="1"
+        android:padding="@dimen/size_8dp" />
+
+    <EditText
+        android:id="@+id/emailText"
+        style="@style/TextStyleRegular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_32dp"
+        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:background="@drawable/edit_text_background"
+        android:drawableLeft="@drawable/ic_email"
+        android:drawablePadding="@dimen/text_size_8"
+        android:elevation="@dimen/size_2dp"
+        android:ems="10"
+        android:hint="Email address"
+        android:inputType="number"
+        android:maxLines="1"
+        android:padding="@dimen/size_8dp" />
+
+    <!--<LinearLayout
+        android:id="@+id/spinner_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_32dp"
+        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginTop="@dimen/size_16dp"
+        android:orientation="horizontal"
+        android:background="@drawable/edit_text_background">
+
+        <android.support.v7.widget.AppCompatSpinner
+            android:id="@+id/spinner_start_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_arrow_drop_down" />
+
+    </LinearLayout>-->
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/size_32dp"
+        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginTop="@dimen/size_16dp">
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/radioMale"
+            style="@style/TextStyleMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:paddingStart="@dimen/size_8dp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/radioFemale"
+            style="@style/TextStyleMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:paddingStart="@dimen/size_8dp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+
+    </RadioGroup>
+
+
+</LinearLayout>
