@@ -7,6 +7,17 @@
     android:orientation="vertical"
     tools:context=".fragments.SignUpNameFragment">
 
+    <!--<TextView
+        android:id="@+id/signUpText"
+        style="@style/TextStyleBold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/size_32dp"
+        android:text="Sign up"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size_20" />-->
+
     <EditText
         android:id="@+id/nameText"
         style="@style/TextStyleRegular"
@@ -79,35 +90,13 @@
         android:maxLines="1"
         android:padding="@dimen/size_8dp" />
 
-    <!--<LinearLayout
-        android:id="@+id/spinner_rl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/size_32dp"
-        android:layout_marginStart="@dimen/size_32dp"
-        android:layout_marginTop="@dimen/size_16dp"
-        android:orientation="horizontal"
-        android:background="@drawable/edit_text_background">
-
-        <android.support.v7.widget.AppCompatSpinner
-            android:id="@+id/spinner_start_date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_white" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@drawable/ic_arrow_drop_down" />
-
-    </LinearLayout>-->
-
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/size_32dp"
         android:layout_marginStart="@dimen/size_32dp"
-        android:layout_marginTop="@dimen/size_16dp">
+        android:layout_marginTop="@dimen/size_16dp"
+        android:orientation="horizontal">
 
         <android.support.v7.widget.AppCompatRadioButton
             android:id="@+id/radioMale"
@@ -116,6 +105,7 @@
             android:layout_height="wrap_content"
             android:text="Male"
             android:paddingStart="@dimen/size_8dp"
+            android:paddingEnd="@dimen/size_16dp"
             android:textColor="@color/colorPrimaryDark"/>
 
         <android.support.v7.widget.AppCompatRadioButton
@@ -130,5 +120,15 @@
 
     </RadioGroup>
 
+    <!--<Button
+        android:id="@+id/nextButton"
+        style="@style/TextStyleMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_32dp"
+        android:background="@drawable/button_background"
+        android:minHeight="@dimen/size_40dp"
+        android:text="Next"
+        android:textColor="@android:color/white" />-->
 
 </LinearLayout>
