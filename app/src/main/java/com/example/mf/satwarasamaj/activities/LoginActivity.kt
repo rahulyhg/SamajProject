@@ -13,8 +13,14 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         samajLogo.loadImage(R.drawable.logo)
+
         signUpText.setOnClickListener {
             startActivity(Intent(this, SignUpActivity::class.java))
+        }
+
+        loginButton.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
+            finish()
         }
     }
 }

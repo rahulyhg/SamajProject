@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,7 +8,7 @@
     android:orientation="vertical"
     tools:context=".fragments.SignUpNameFragment">
 
-    <!--<TextView
+    <TextView
         android:id="@+id/signUpText"
         style="@style/TextStyleBold"
         android:layout_width="wrap_content"
@@ -16,15 +17,18 @@
         android:layout_marginTop="@dimen/size_32dp"
         android:text="Sign up"
         android:textColor="@color/colorPrimary"
-        android:textSize="@dimen/text_size_20" />-->
+        android:textSize="@dimen/text_size_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/nameText"
         style="@style/TextStyleRegular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/size_32dp"
-        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginEnd="@dimen/size_16dp"
+        android:layout_marginStart="@dimen/size_16dp"
         android:layout_marginTop="@dimen/size_32dp"
         android:background="@drawable/edit_text_background"
         android:drawableLeft="@drawable/ic_person"
@@ -34,15 +38,18 @@
         android:hint="Name"
         android:inputType="number"
         android:maxLines="1"
-        android:padding="@dimen/size_8dp" />
+        android:padding="@dimen/size_8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpText" />
 
     <EditText
         android:id="@+id/surnameText"
         style="@style/TextStyleRegular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/size_32dp"
-        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginEnd="@dimen/size_16dp"
+        android:layout_marginStart="@dimen/size_16dp"
         android:layout_marginTop="@dimen/size_16dp"
         android:background="@drawable/edit_text_background"
         android:drawableLeft="@drawable/ic_person"
@@ -52,15 +59,18 @@
         android:hint="Surname"
         android:inputType="number"
         android:maxLines="1"
-        android:padding="@dimen/size_8dp" />
+        android:padding="@dimen/size_8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameText" />
 
     <EditText
-        android:id="@+id/mobileEditText"
+        android:id="@+id/mobileText"
         style="@style/TextStyleRegular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/size_32dp"
-        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginEnd="@dimen/size_16dp"
+        android:layout_marginStart="@dimen/size_16dp"
         android:layout_marginTop="@dimen/size_16dp"
         android:background="@drawable/edit_text_background"
         android:drawableLeft="@drawable/ic_smartphone"
@@ -70,15 +80,18 @@
         android:hint="Mobile number"
         android:inputType="number"
         android:maxLines="1"
-        android:padding="@dimen/size_8dp" />
+        android:padding="@dimen/size_8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/surnameText" />
 
     <EditText
         android:id="@+id/emailText"
         style="@style/TextStyleRegular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/size_32dp"
-        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginEnd="@dimen/size_16dp"
+        android:layout_marginStart="@dimen/size_16dp"
         android:layout_marginTop="@dimen/size_16dp"
         android:background="@drawable/edit_text_background"
         android:drawableLeft="@drawable/ic_email"
@@ -88,47 +101,60 @@
         android:hint="Email address"
         android:inputType="number"
         android:maxLines="1"
-        android:padding="@dimen/size_8dp" />
+        android:padding="@dimen/size_8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mobileText" />
 
     <RadioGroup
+        android:id="@+id/genderRadioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/size_32dp"
-        android:layout_marginStart="@dimen/size_32dp"
+        android:layout_marginEnd="@dimen/size_16dp"
+        android:layout_marginStart="@dimen/size_16dp"
         android:layout_marginTop="@dimen/size_16dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailText">
 
         <android.support.v7.widget.AppCompatRadioButton
             android:id="@+id/radioMale"
             style="@style/TextStyleMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Male"
-            android:paddingStart="@dimen/size_8dp"
             android:paddingEnd="@dimen/size_16dp"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:paddingStart="@dimen/size_8dp"
+            android:buttonTint="@color/colorPrimary"
+            android:text="Male"
+            android:textColor="@color/colorPrimary" />
 
         <android.support.v7.widget.AppCompatRadioButton
             android:id="@+id/radioFemale"
             style="@style/TextStyleMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Female"
             android:paddingStart="@dimen/size_8dp"
-            android:textColor="@color/colorPrimaryDark"/>
-
+            android:buttonTint="@color/colorPrimary"
+            android:text="Female"
+            android:textColor="@color/colorPrimary" />
 
     </RadioGroup>
 
-    <!--<Button
+    <Button
         android:id="@+id/nextButton"
         style="@style/TextStyleMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/size_32dp"
+        android:layout_marginLeft="@dimen/size_16dp"
+        android:layout_marginRight="@dimen/size_16dp"
+        android:layout_marginBottom="@dimen/size_32dp"
         android:background="@drawable/button_background"
         android:minHeight="@dimen/size_40dp"
         android:text="Next"
-        android:textColor="@android:color/white" />-->
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</LinearLayout>
+</android.support.constraint.ConstraintLayout>

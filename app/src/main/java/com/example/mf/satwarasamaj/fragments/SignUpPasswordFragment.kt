@@ -9,33 +9,34 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.mf.satwarasamaj.R
-import kotlinx.android.synthetic.main.fragment_sign_up_name.*
+import kotlinx.android.synthetic.main.fragment_sign_up_password.*
 
-class SignUpNameFragment : Fragment() {
+class SignUpPasswordFragment : Fragment() {
 
-    var mListener: SignUpNameFragmentListener? = null
+    private var mListener: SignUpPasswordFragmentListener? = null
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_sign_up_name, container, false)
+        return inflater.inflate(R.layout.fragment_sign_up_password, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        nextButton.setOnClickListener {
-            mListener?.onNextButtonClicked()
+        finishButton.setOnClickListener {
+            mListener?.onFinishButtonClicked()
         }
     }
 
     override fun onAttach(context: Context?) {
         super.onAttach(context)
-        if (context is SignUpNameFragmentListener) {
+        if (context is SignUpPasswordFragmentListener) {
             mListener = context
         } else {
-            throw RuntimeException(context.toString() + " must implement SignUpNameFragmentListener")
+            throw RuntimeException(context.toString() + " must implement SignUpPasswordFragmentListener")
         }
     }
 
-    interface SignUpNameFragmentListener {
-        fun onNextButtonClicked() {}
+    interface SignUpPasswordFragmentListener {
+        fun onFinishButtonClicked() {}
     }
+
 }
