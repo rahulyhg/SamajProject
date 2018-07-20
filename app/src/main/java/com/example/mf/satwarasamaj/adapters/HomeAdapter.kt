@@ -4,6 +4,7 @@ import android.support.v7.view.menu.ActionMenuItemView
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
+import com.bumptech.glide.RequestManager
 import com.example.mf.satwarasamaj.R
 import com.example.mf.satwarasamaj.inflate
 import com.example.mf.satwarasamaj.model.HomeModel

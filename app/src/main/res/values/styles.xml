@@ -11,14 +11,22 @@
     <style name="TextStyleBold" parent="@android:style/Widget.TextView">
         <item name="android:fontFamily">@font/poppins_bold</item>
     </style>
+
     <style name="TextStyleRegular" parent="@android:style/Widget.TextView">
         <item name="android:fontFamily">@font/poppins_regular</item>
     </style>
+
     <style name="TextStyleItalic" parent="@android:style/Widget.TextView">
         <item name="android:fontFamily">@font/poppins_italic</item>
     </style>
+
     <style name="TextStyleMedium" parent="@android:style/Widget.TextView">
         <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="navigationViewStyle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
     </style>
 
 </resources>

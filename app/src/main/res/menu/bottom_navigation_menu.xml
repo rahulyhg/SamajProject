@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_bottom_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/action_bottom_dashboard"
+        android:icon="@drawable/ic_dashboard"
+        android:title="Dashboard" />
+    <item
+        android:id="@+id/action_bottom_events"
+        android:icon="@drawable/ic_today"
+        android:title="Events" />
+    <item
+        android:id="@+id/action_bottom_library"
+        android:icon="@drawable/ic_photo_library"
+        android:title="Gallery" />
+
+</menu>
