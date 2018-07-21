@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import com.bumptech.glide.RequestManager
 import com.example.mf.satwarasamaj.R
 import com.example.mf.satwarasamaj.inflate
+import com.example.mf.satwarasamaj.loadImage
 import com.example.mf.satwarasamaj.model.HomeModel
+import kotlinx.android.synthetic.main.home_recycler_layout.view.*
 
 class HomeAdapter(val homeModelList: List<HomeModel>, val mListener: HomeAdapterListener) : RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
@@ -24,7 +26,8 @@ class HomeAdapter(val homeModelList: List<HomeModel>, val mListener: HomeAdapter
         private val view = itemView
 
         fun bindView(homeModel: HomeModel) {
-
+            view.icon.loadImage(homeModel.Icon)
+            view.nameText.text = homeModel.title
         }
     }
 

@@ -2,14 +2,17 @@ package com.example.mf.satwarasamaj.activities
 
 import android.os.Bundle
 import android.support.design.widget.NavigationView
+import android.support.v4.app.Fragment
 import android.support.v4.content.res.ResourcesCompat
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.app.AppCompatDialogFragment
 import android.support.v7.widget.Toolbar
 import android.text.SpannableStringBuilder
 import android.view.MenuItem
 import com.example.mf.satwarasamaj.R
 import com.example.mf.satwarasamaj.classes.BottomNavigationViewHelper
+import com.example.mf.satwarasamaj.fragments.DashboardFragment
 import kotlinx.android.synthetic.main.activity_home.*
 
 
@@ -91,7 +94,7 @@ class HomeActivity : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.action_bottom_home -> {
-                    //setFragment(HomeFeedNewFragment())
+                    setFragment(DashboardFragment())
                 }
                 R.id.action_bottom_dashboard -> {
                 }
@@ -102,6 +105,10 @@ class HomeActivity : AppCompatActivity() {
             }
             true
         }
+    }
+
+    private fun setFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer, fragment).commit()
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
