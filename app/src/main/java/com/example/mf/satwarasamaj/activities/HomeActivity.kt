@@ -28,7 +28,6 @@ class HomeActivity : AppCompatActivity() {
         supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_menu)
 
         BottomNavigationViewHelper.removeShiftingMode(bottomNavigationView)
-
         navigationView.setCheckedItem(R.id.action_share)
         navigationView.setNavigationItemSelectedListener(NavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
@@ -91,6 +90,7 @@ class HomeActivity : AppCompatActivity() {
             false
         })
 
+
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.action_bottom_home -> {
@@ -105,6 +105,7 @@ class HomeActivity : AppCompatActivity() {
             }
             true
         }
+        bottomNavigationView.setSelectedItemId(R.id.action_bottom_home)
     }
 
     private fun setFragment(fragment: Fragment) {

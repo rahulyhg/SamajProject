@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/samajLogo"
-        android:layout_width="@dimen/size_200dp"
-        android:layout_height="@dimen/size_200dp"
+        android:layout_width="@dimen/size_300dp"
+        android:layout_height="@dimen/size_300dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         style="@style/TextStyleBold"
         android:text="Satwara Samaj"
-        android:layout_marginTop="@dimen/size_16dp"
+        android:layout_marginTop="@dimen/size_8dp"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="@dimen/text_size_24"
         app:layout_constraintEnd_toEndOf="parent"

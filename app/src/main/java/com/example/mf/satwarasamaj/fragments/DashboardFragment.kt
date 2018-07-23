@@ -30,7 +30,7 @@ class DashboardFragment : Fragment(), HomeAdapter.HomeAdapterListener {
         homeModelList.add(HomeModel("Directory", R.drawable.ic_import_contacts))
         homeModelList.add(HomeModel("Business Directory", R.drawable.ic_work))
         homeModelList.add(HomeModel("Article", R.drawable.ic_assignment))
-        homeModelList.add(HomeModel("Carrer Guidance", R.drawable.ic_school))
+        homeModelList.add(HomeModel("Career Guidance", R.drawable.ic_school))
         homeModelList.add(HomeModel("Job", R.drawable.ic_business_center))
         homeModelList.add(HomeModel("News", R.drawable.ic_local_library))
         homeModelList.add(HomeModel("Death News", R.drawable.ic_import_contacts))
@@ -47,6 +47,4 @@ class DashboardFragment : Fragment(), HomeAdapter.HomeAdapterListener {
         dashBoardRecyclerview.layoutManager = GridLayoutManager(context, 3)
         dashBoardRecyclerview.adapter = HomeAdapter(homeModelList, this)
     }
-
-
 }
